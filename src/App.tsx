@@ -1,7 +1,5 @@
-import SelectMenu from './components';
-
 const App = () => {
-  return <SelectMenu data={[{ name: 'coucou' }, { name: 'test' }]} id='oui' />;
+  return <div></div>;
 };
 
 export default App;

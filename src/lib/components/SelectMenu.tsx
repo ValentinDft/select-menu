@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import styles from './index.module.scss';
+import styles from './select-menu.module.scss';
 import { FaCaretDown } from 'react-icons/fa';
+import React from 'react';
 
 type objectData = {
   name: string;
