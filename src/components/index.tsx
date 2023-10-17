@@ -11,7 +11,7 @@ type propsSelectMenu = {
   id: string;
 };
 
-const SelectMenu = ({ data, id }: propsSelectMenu) => {
+const SelectMenu = ({ data }: propsSelectMenu) => {
   const [openSelectMenu, setOpenSelectMenu] = useState<boolean>(false);
   const [selectedValue, setSelectedValue] = useState<string>(data[0].name);
 
