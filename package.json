@@ -1,5 +1,5 @@
 {
-  "name": "select-menu",
+  "name": "react-select-menu",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "sass": "^1.69.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
@@ -27,5 +29,17 @@
     "husky": "^8.0.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "vite.config.js",
+  "author": "Valentin Duffet",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "components"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValentinDft/select-menu.git"
   }
 }
