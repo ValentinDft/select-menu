@@ -1,27 +1,59 @@
-# React + TypeScript + Vite
+# Select Menu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> This is a component for an input list https://www.npmjs.com/package/react-select-menu-valentindft
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project requires NodeJS and NPM.
+[Node](http://nodejs.org/) and [NPM](https://npmjs.org/) are really easy to install.
+Make sure there are install in your device.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Install the npm package in your project
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```sh
+npm i react-select-menu-valentindft
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## How to use it 
+
+### Import 
+```javascript
+import { SelectMenu } from 'react-select-menu-valentindft';
+```
+
+### Component
+```javascript
+// data is the data you want to list inside the input
+// you can add an id to the input
+// inputValue is the input value selected
+
+<SelectMenu data={myData} id='some id' inputValue={valueSelectMenuMyData} />
+```
+
+### Inject Data
+```javascript
+// The structure of your data need to be an array of object with key name
+
+const myData: Array<object> = [
+   {
+      name: 'First value'
+   },
+   {
+      name: 'Second value'
+   },
+   {
+      name: 'Third value'
+   }
+]
+```
+
+### Input value
+```javascript
+let stateInput: string;
+
+const valueSelectMenuMyData = (value: string) => {
+    stateInput = value;
+};
+```
