@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './select-menu.module.scss';
 import { FaCaretDown } from 'react-icons/fa';
 import React from 'react';
@@ -10,11 +10,16 @@ type objectData = {
 type propsSelectMenu = {
   data: Array<objectData>;
   id: string;
+  inputValue: (value: string) => void;
 };
 
-const SelectMenu = ({ data }: propsSelectMenu) => {
+const SelectMenu = ({ data, inputValue }: propsSelectMenu) => {
   const [openSelectMenu, setOpenSelectMenu] = useState<boolean>(false);
   const [selectedValue, setSelectedValue] = useState<string>(data[0].name);
+
+  useEffect(() => {
+    inputValue(selectedValue);
+  }, [selectedValue, inputValue]);
 
   const handleSelectValue = (event: React.MouseEvent<HTMLLIElement>): void => {
     setSelectedValue((event.target as HTMLElement).innerText);
