@@ -2,6 +2,8 @@
 
 > This is a component for an input list https://www.npmjs.com/package/react-select-menu-valentindft
 
+![Model](https://github.com/ValentinDft/select-menu/blob/master/public/assets/input.png)
+
 ## Prerequisites
 
 This project requires NodeJS and NPM.
@@ -48,6 +50,7 @@ const myData: Array<object> = [
    }
 ]
 ```
+![Model](https://github.com/ValentinDft/select-menu/blob/master/public/assets/input-list.png)
 
 ### Input value
 ```javascript
